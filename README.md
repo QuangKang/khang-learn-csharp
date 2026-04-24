@@ -85,7 +85,7 @@ Một Web API Server xây dựng bằng kiến trúc ASP.NET Core Controllers, q
 
 ```mermaid
 flowchart TD
-    Client(Swagger UI / Postman) -- HTTP Request --> API[ASP.NET Core Web API]
+    Client(Swagger UI) -- HTTP Request --> API[ASP.NET Core Web API]
     
     subgraph Server_Process [Kestrel Web Server]
         API -- Routing --> Controller(PersonController)
