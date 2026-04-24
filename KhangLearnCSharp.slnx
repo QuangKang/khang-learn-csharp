@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="01_OopPractice/01_OopPractice.csproj" />
+  <Project Path="02_GenericsCollections/02_GenericsCollections.csproj" />
+  <Project Path="03_LinqPractice/03_LinqPractice.csproj" />
+  <Project Path="04_AsyncPractice/04_AsyncPractice.csproj" />
+  <Project Path="05_RecordsPractice/05_RecordsPractice.csproj" />
+  <Project Path="WebApi/WebApi.csproj" />
+</Solution>
