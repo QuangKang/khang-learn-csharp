@@ -9,7 +9,7 @@ Dự án này là tổng hợp các kịch bản thực hành nền tảng về 
 1. [Prerequisites](#prerequisites)
 2. [Setup Guide](#setup-guide)
 3. [Phần 1: Practice core features](#phần-1-practice-core-features)
-4. [Phần 2: Person REST API](#phần-2-person-rest-api)
+4. [Phần 2: Web API](#phần-2-web-api)
 5. [Testing Guide](#testing-guide)
 
 ---
