@@ -13,7 +13,7 @@ List<Person> peopleList = new List<Person>
 
 Console.WriteLine("Filter & Map Demo");
 //Example: Tìm tên của những người ở phòng IT, trên 20 tuổi, sắp xếp tên theo A-Z.
-var itNames = peopleList.Where(p => p.Department == "IT" && p.Age > 20).OrderBy(p => p.Name).Select(p => p.Name).ToList();
+var itNames = peopleList.Where(p => p.Department == "IT" && p.Age > 20).Select(p => p.Name).OrderBy(p => p).ToList();
 
 foreach (var name in itNames)
 {

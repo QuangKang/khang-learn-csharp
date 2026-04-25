@@ -87,7 +87,7 @@ Một Web API Server xây dựng bằng kiến trúc ASP.NET Core Controllers, q
 flowchart TD
     Client(Swagger UI) -- HTTP Request --> API[ASP.NET Core Web API]
     
-    subgraph Server_Process [Kestrel Web Server]
+    subgraph Server_Process [Web Server]
         API -- Routing --> Controller(PersonController)
         
         subgraph Logic_Layer [Business Logic]
