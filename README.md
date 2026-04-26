@@ -11,6 +11,7 @@ Dự án này là tổng hợp các kịch bản thực hành nền tảng về 
 3. [Phần 1: Practice core features](#phần-1-practice-core-features)
 4. [Phần 2: Web API](#phần-2-web-api)
 5. [Testing Guide](#testing-guide)
+6. [Additional Knowledge](#additional-knowledge)
 
 ---
 
@@ -129,5 +130,19 @@ Dự án đã tích hợp sẵn công cụ tự động sinh tài liệu OpenAPI
 ```bash
 http://localhost:5000/swagger
 ```
+
+---
+
+## Additional Knowledge
+
+### 1. `class` vs `record` vs `struct`
+* **`class`**: Là kiểu tham chiếu (reference type), lưu trên vùng nhớ Heap. Mặc định là mutable (có thể thay đổi nội dung). Không có sẵn so sánh theo giá trị (value equality), muốn so sánh nội dung 2 class thì cần override lại hàm.
+* **`record`**: Là kiểu tham chiếu (reference type). Mặc định là bất biến (immutable by default). Đã được .NET hỗ trợ sẵn tính năng so sánh theo giá trị (value equality) dựa trên các property bên trong. Dùng rất tốt cho các object luân chuyển dữ liệu (DTO).
+* **`struct`**: Là kiểu tham trị (value type), hoạt động trên vùng nhớ Stack. Tốc độ truy xuất rất nhanh, rất tốt cho các khối data nhỏ gọn và không cần dùng đến tính kế thừa.
+
+### 2. Async với `Task`, `Task<T>` và `await`
+* **`Task`**: Đại diện cho một async operation **không** trả về giá trị (hoạt động tương đương với hàm `void` truyền thống).
+* **`Task<T>`**: Đại diện cho một async operation sẽ trả về một giá trị có kiểu `T` sau khi hoàn thành.
+* **Tại sao phải dùng `await`?**: Giúp hệ thống không bị "đóng băng" (block thread) trong lúc chờ các tác vụ tốn thời gian (như đọc file, chọc DB, gọi API). `await` giúp giải phóng thread hiện tại, trả nó về lại Thread Pool để đi xử lý các request khác. Khi tác vụ ngầm hoàn thành, hệ thống sẽ cấp một thread khác để chạy tiếp.
 
 ---
